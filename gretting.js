@@ -9,19 +9,28 @@ const USER_LS = "currentUser",
 
 function saveName(text){
   localStorage.setItem(USER_LS, text);
+  // localStorage 에
+  // key  USER_LS(currentUser)
+  // value text 로 저장된다.
 }
 
 
 function handleSubmit() {
-    event.preventDefault();
+    event.preventDefault(); 
+    //submit 하면 디폴트로 새로고침 하게 되어있는걸 지워줌.
+
     const currentValue = input.value;
+    // input 태그에서 입력된 값을 받아온다.
+
     paintGreeting(currentValue);
     saveName(currentValue);
 }
 
 function askForName() {
   form.classList.add(SHOWING_CN);
+  // index.html form 태그에 SHOWING_CN(showing) 클래스 추가.
   form.addEventListener("submit", handleSubmit)
+  // form 태그에 이벤트리스너 추가.
 }
 
 function paintGreeting(text) {
@@ -32,6 +41,8 @@ function paintGreeting(text) {
 
 function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
+  // 처음엔 USER_LS 라는 키값이 저장이 안되어있으니 null이다. -> 저장된 이름 없음.
+  console.log(currentUser);
   if (currentUser === null) {
     // she is not
     askForName();
