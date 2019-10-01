@@ -12,7 +12,7 @@ function saveName(text){
   // localStorage 에
   // key  USER_LS(currentUser)
   // value text 로 저장된다.
-}
+} 
 
 
 function handleSubmit() {

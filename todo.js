@@ -28,18 +28,20 @@ function saveToDos(){
 
 function paintToDo(text){
     const li = document.createElement("li");
+    li.classList.add("paintToDoList");
     // Element생성
 
     const delBtn = document.createElement("button");
+    delBtn.classList.add("delBtn")
     const span = document.createElement("span");
     const newId = toDos.length + 1;
     
-    delBtn.innerText = "❌";
+    delBtn.innerText = "X";
     delBtn.addEventListener("click", deleteToDo)
 
-    span.innerText = text;
-    li.appendChild(delBtn);
+    span.innerText = `- ${text}`;
     li.appendChild(span);
+    li.appendChild(delBtn);
     //span delBtn을 li의 자식으로 넣는다.
     li.id = newId;
     toDoList.appendChild(li);

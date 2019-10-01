@@ -2,29 +2,38 @@
 <html lang="en">
   <head>
     <title>Document</title>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
-    <div class="js-clock">
-      <h1>00:00</h1>
+    <div class="index-container">
+      <span class="js-weather weather"></span>
+      <div class="js-clock clock">
+        <h1>00:00</h1>
+      </div>
+      <form class="js-form form">
+        <!--이름 입력하면 showing class 추가됨 -->
+        <input
+          type="text"
+          class="form__name-effect"
+          placeholder="What's your name?"
+        />
+        <span class="form__focus-border"></span>
+      </form>
+      <h4 class="js-greetings gretting"></h4>
+
+      <form class="js-toDoForm toDoForm">
+        <input
+          type="text"
+          placeholder="Write a to do"
+          class="toDoForm__toDo-effect"
+        />
+        <span class="toDoForm__focus-border"></span>
+      </form>
+
+      <ul class="js-toDoList toDoList"></ul>
     </div>
-    <form class="js-form form">
-      <input type="text" placeholder="What is your name?" />
-    </form>
-    <h4 class="js-greetings gretting"></h4>
-
-    <form class="js-toDoForm">
-      <input type="text" placeholder="Write a to do">
-    </form>
-
-    <ul class="js-toDoList">
-      
-    </ul>
-  
-    <span class="js-weather"></span>
-
     <script src="clock.js"></script>
     <script src="gretting.js"></script>
     <script src="todo.js"></script>
